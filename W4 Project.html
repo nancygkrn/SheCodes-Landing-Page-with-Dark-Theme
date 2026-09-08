@@ -1,0 +1,208 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>🍿 Watching Movies</title>
+
+    <style>
+      body {
+        background: linear-gradient(
+          106.5deg,
+          rgba(255, 215, 185, 0.91) 23%,
+          rgba(223, 159, 247, 0.8) 93%
+        );
+        font-family: Arial, Helvetica, sans-serif;
+      }
+      h1 {
+        text-align: center;
+        color: #926cf1;
+      }
+      h2 {
+        text-align: center;
+        font-size: 19px;
+        font-style: italic;
+      }
+
+      img {
+        max-width: 100%;
+      }
+
+      p {
+        font-size: 15px;
+        line-height: 1.5;
+        width: 100%;
+        box-sizing: border-box;
+      }
+
+      a {
+        color: #926cf1;
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+
+      footer {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 19px;
+        font-family: "Courier New", Courier, monospace;
+      }
+
+      .theme-button {
+        font-size: 15px;
+        background: black;
+        color: white;
+        padding: 9px 8px;
+        display: block;
+        margin: 0 auto;
+        border-radius: 8px;
+        transition: all 100ms ease-in-out;
+      }
+
+      .theme-button:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+        border: 2px solid white;
+      }
+
+      .container {
+        max-width: 500px;
+        background: white;
+        padding: 20px;
+        border-radius: 9px;
+        margin: 20px auto;
+      }
+      .vampire-movie-picture {
+        border-radius: 10px;
+        transition: all 150ms ease-in-out;
+      }
+      .vampire-movie-picture:hover {
+        transform: scale(1.2);
+        filter: contrast(70%);
+        cursor: pointer;
+      }
+
+      .grid {
+        margin: 5px;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 8px;
+      }
+
+      .grid img {
+        width: 100%;
+        border-radius: 8px;
+        object-fit: cover;
+        aspect-ratio: 3/2;
+      }
+
+      .cta-button {
+        display: block;
+        margin: 0 auto;
+        padding: 12px 10px;
+        border: 2px solid #926cf1;
+        background-color: #926cf1;
+        border-radius: 8px;
+        font-size: 15px;
+        transition: all 100ms ease-in-out;
+        font-weight: bold;
+        color: white;
+      }
+
+      .cta-button:hover {
+        background: white;
+        color: black;
+        cursor: pointer;
+      }
+
+      .dark {
+        background: linear-gradient(
+          109.6deg,
+          rgb(6, 2, 2) 32.4%,
+          rgb(137, 30, 47) 98.8%
+        );
+        color: white;
+      }
+
+      .dark .container {
+        background: rgba(0, 0, 0, 0.6);
+      }
+
+      .dark a {
+        color: plum;
+      }
+    </style>
+  </head>
+  <body>
+    <button class="theme-button">Change Theme</button>
+    <div class="container">
+      <h1>My love letter to film 🎬</h1>
+      <h2>From classics to cult favorites — these are mine.</h2>
+      <a href="https://www.imdb.com/de/title/tt24216998/" target="_blank">
+        <img
+          class="vampire-movie-picture"
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/863/original/images.jpeg?1784300784"
+          alt="Vampire Movie"
+        />
+      </a>
+      <div class="grid">
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/864/original/images_%281%29.jpeg?1784300854"
+          alt="No Other Choice"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/862/original/Casablanca.jpg?1784300673"
+          alt="Casablanca"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/861/original/everything.jpeg?1784300665"
+          alt="Everything Everywhere all at once"
+        />
+        <img
+          src="https://s3.amazonaws.com/shecodesio-production/uploads/files/000/180/860/original/flow.jpeg?1784300651"
+          alt="Flow"
+        />
+      </div>
+      <p>
+        Films are widely considered to be an important art form; films
+        entertain, educate, enlighten, and inspire audiences. The visual
+        elements of cinema need no translation, giving the motion picture a
+        universal power of communication. Any film can become a worldwide
+        attraction, especially with the addition of dubbing or subtitles that
+        translate the dialogue. Films are also artifacts created by specific
+        cultures, which reflect those cultures, and, in turn, affect them.
+      </p>
+
+      <a href="https://en.wikipedia.org/wiki/Film" target="_blank">
+        📖 Learn more about films</a
+      >
+      <br />
+      <br />
+      <button class="cta-button">Join our movie club</button>
+    </div>
+    <footer>
+      Coded with HTML, CSS & JavaScript <br />
+      by Nancy G 💜
+    </footer>
+    <script>
+      function changeTheme() {
+        let body = document.querySelector("body");
+        body.classList.toggle("dark");
+      }
+
+      let themeButton = document.querySelector(".theme-button");
+      themeButton.addEventListener("click", changeTheme);
+
+      function emailClick() {
+        let email = prompt("Enter your email");
+        alert("Thanks for joining, we'll contact you at: " + email);
+      }
+
+      let ctaButton = document.querySelector(".cta-button");
+      ctaButton.addEventListener("click", emailClick);
+    </script>
+  </body>
+</html>
